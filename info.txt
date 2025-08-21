@@ -1,0 +1,26 @@
+stock management
+   whole chicken
+   chicken thighs
+   chicken wings
+   pork ribs
+   pork belly strips
+   beef ribs
+   brisket
+   sausages jalepeno cheese
+   boreworse cheese 
+   5 chicken wings
+   10 chicken wings
+sovude timers
+  cooked meat 
+
+alarm timers
+
+modules
+categories management
+process  management 
+    status 
+    timer
+    
+
+
+
