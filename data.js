@@ -1,4 +1,42 @@
 const data = {
+    process: [
+        {
+            id:1,
+            categoryId:6,
+            type:"marinade",
+            where:"souved",
+            startTime:"0700",
+            timer:"480",
+            status:"in-process",
+            quantity:"2",
+            stockId:3
+        },
+        {
+            id:2,
+            categoryId:3,
+            type:"marinade",
+            where:"souved",
+            startTime:"0500",
+            timer:"300",
+            status:"in-process",
+            quantity:"3",
+            stockId:3
+        },
+         {
+            id:3,
+            categoryId:7,
+            type:"smoked",
+            where:"smoker",
+            startTime:"0500",
+            timer:"720",
+            status:"in-process",
+            quantity:"10",
+            stockId:6
+        },
+
+
+    ],
+
     categories: [
         {
             id:1,
@@ -108,44 +146,7 @@ const data = {
 
     ],
 
-    process: [
-        {
-            id:1,
-            categoryId:6,
-            type:"marinade",
-            where:"souved",
-            startTime:"0700",
-            timer:"480",
-            status:"in-process",
-            quantity:"2",
-            stockId:3
-        },
-        {
-            id:2,
-            categoryId:3,
-            type:"marinade",
-            where:"souved",
-            startTime:"0500",
-            timer:"300",
-            status:"in-process",
-            quantity:"3",
-            stockId:3
-        },
-         {
-            id:3,
-            categoryId:7,
-            type:"smoked",
-            where:"smoker",
-            startTime:"0500",
-            timer:"720",
-            status:"in-process",
-            quantity:"10",
-            stockId:6
-        },
-
-
-    ]
-
+    
 
 }
 
