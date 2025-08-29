@@ -5,8 +5,8 @@ const data = {
             categoryId:6,
             type:"marinade",
             where:"souved",
-            startTime:"0700",
-            timer:"480",
+            startTime:"2025-08-29 10:00:00",
+            timer:480,
             status:"in-process",
             quantity:"2",
             stockId:3
@@ -16,8 +16,8 @@ const data = {
             categoryId:3,
             type:"marinade",
             where:"souved",
-            startTime:"0500",
-            timer:"300",
+            startTime:"2025-08-28 06:00:00",
+            timer:300,
             status:"in-process",
             quantity:"3",
             stockId:3
@@ -27,8 +27,8 @@ const data = {
             categoryId:7,
             type:"smoked",
             where:"smoker",
-            startTime:"0500",
-            timer:"720",
+            startTime:"2025-08-27 09:00:00",
+            timer:720,
             status:"in-process",
             quantity:"10",
             stockId:6

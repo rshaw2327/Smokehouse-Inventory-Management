@@ -4,8 +4,7 @@ console.log(data);
 window.addEventListener("load", () => {
   const statCont = document.querySelector(".stat-cont");
   const tableCont = document.querySelector(".table-cont");
-  processTable()
-
+  processTable();
 
   const entries = Object.entries(data);
 
@@ -31,14 +30,13 @@ window.addEventListener("load", () => {
       statEl.classList.add("active");
 
       let statName = statEl.querySelector(".name").innerHTML;
-      if(statName == "process"){
-        processTable()
-      } else if(statName == "categories"){
-        categoryTable()
-      }else if(statName == "stock"){
-        stockTable()
+      if (statName == "process") {
+        processTable();
+      } else if (statName == "categories") {
+        categoryTable();
+      } else if (statName == "stock") {
+        stockTable();
       }
-
     });
   });
 
@@ -69,7 +67,7 @@ window.addEventListener("load", () => {
         </tr>`;
     });
     catTbodyHtml += `</tbody>
-    </table>`
+    </table>`;
     tableCont.innerHTML = catTbodyHtml;
   }
 
@@ -86,8 +84,7 @@ window.addEventListener("load", () => {
                             <th>Category Name</th>
                             <th>type</th>
                             <th>where</th>
-                            <th>startTime</th>
-                            <th>timer</th>
+                            <th>countdown</th>
                             <th>status</th>
                             <th>quantity</th>
                             <th>stockID</th>
@@ -103,8 +100,9 @@ window.addEventListener("load", () => {
       <td>${getCatNameByCatId(process.categoryId)}</td>
       <td>${process.type}</td>
       <td>${process.where}</td>
-      <td>${process.startTime}</td>
-      <td>${process.timer}</td>
+      <td class="cd"  id="cd-${process.id}" data-starttime="${
+        process.startTime
+      }" data-timer="${process.timer}"></td>
       <td class="status">${process.status}</td>
       <td class="quantity">${process.quantity}</td>
       <td>${process.stockId}</td>
@@ -118,9 +116,33 @@ window.addEventListener("load", () => {
        </table>`;
 
     tableCont.innerHTML = processHtml;
+    createCountdowns();
   }
 
-  // processTable()
+  function createCountdowns() {
+    let cds = document.querySelectorAll("td[id^='cd']");
+    cds.forEach((cd) => {
+      let startDate = new Date(cd.dataset.starttime).getTime();
+      let endDate = startDate + Number(cd.dataset.timer * 60 * 1000);
+      let remainingTime = endDate - new Date().getTime();
+      if(remainingTime < 1){
+        cd.innerHTML = "Finished"
+      } else {
+        cd.innerHTML = ((endDate - new Date().getTime()) / 1000)/60;
+
+        console.log(cd)
+
+        var distance = countDownDate - now;
+
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      }
+
+    });
+  }
 
   function stockTable() {
     let stockHtml = `
