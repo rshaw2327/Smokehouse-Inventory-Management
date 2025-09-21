@@ -5,8 +5,8 @@ const data = {
             categoryId:6,
             type:"marinade",
             where:"souved",
-            startTime:"2025-09-01 08:00:00",
-            timer:520,
+            startTime:"2025-09-21 02:00:00",
+            timer:900,
             status:"in-process",
             quantity:"2",
             stockId:3

@@ -3,7 +3,7 @@ const category = require("../models/category.model")
 exports.createCategory=async(req,res,next)=>{
     const category = await category.create(req.body)
     if(!category){
-        return res.status(500).json({
+        return res.status(404).json({
             success:false,
             message:"cannot create category"
         })
